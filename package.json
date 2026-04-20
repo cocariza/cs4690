@@ -1,0 +1,44 @@
+{
+  "name": "mega-practicum",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:server": "tsc -p tsconfig.json",
+    "build:client": "tsc -p tsconfig.client.json",
+    "build": "npm run build:server && npm run build:client",
+    "prestart": "npm run build",
+    "start": "node ./dist/bin/www.js",
+    "dev": "npm run build && node ./dist/bin/www.js",
+    "seed": "npm run build && node ./dist/server/seed.js",
+    "test": "jest --runInBand --forceExit"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.1",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.18.0",
+    "@types/http-errors": "^2.0.5",
+    "@types/jest": "^29.5.14",
+    "@types/jquery": "^3.5.32",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^22.0.0",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^10.1.4",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  }
+}

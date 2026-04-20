@@ -1,0 +1,87 @@
+:root {
+  --tenant-primary: #275d38;
+  --tenant-primary-dark: #1b4428;
+  --tenant-secondary: #8e8c89;
+  --tenant-accent: #e8e8e8;
+}
+
+body[data-tenant='uvu'] {
+  --tenant-primary: #275d38;
+  --tenant-primary-dark: #1b4428;
+  --tenant-secondary: #8e8c89;
+  --tenant-accent: #e8e8e8;
+}
+
+body[data-tenant='uofu'] {
+  --tenant-primary: #cc0000;
+  --tenant-primary-dark: #8b0000;
+  --tenant-secondary: #444444;
+  --tenant-accent: #f0f0f0;
+}
+
+.tenant-card.tenant-uvu {
+  border-top: 6px solid #275d38;
+  color: #275d38;
+}
+.tenant-card.tenant-uofu {
+  border-top: 6px solid #cc0000;
+  color: #cc0000;
+}
+.tenant-card {
+  transition: transform 150ms ease;
+}
+.tenant-card:hover {
+  transform: translateY(-4px);
+}
+
+.navbar.tenant-nav {
+  background-color: var(--tenant-primary);
+}
+.btn-tenant {
+  background-color: var(--tenant-primary);
+  color: #fff;
+  border: 1px solid var(--tenant-primary);
+}
+.btn-tenant:hover {
+  background-color: var(--tenant-primary-dark);
+  color: #fff;
+}
+.btn-outline-tenant {
+  color: var(--tenant-primary);
+  border: 1px solid var(--tenant-primary);
+  background-color: transparent;
+}
+.btn-outline-tenant:hover {
+  background-color: var(--tenant-primary);
+  color: #fff;
+}
+.tenant-header {
+  color: var(--tenant-primary);
+}
+.badge-tenant {
+  background-color: var(--tenant-primary);
+  color: #fff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .card-title {
+  font-family: 'Rajdhani', Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.section-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.log-item {
+  border-left: 4px solid var(--tenant-primary);
+  padding-left: 12px;
+  margin-bottom: 8px;
+}
