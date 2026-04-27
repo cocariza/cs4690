@@ -7,14 +7,6 @@ const applyTenantTheme = (): void => {
   const tenant = detectTenant();
   document.body.dataset.tenant = tenant;
   document.title = `${tenant.toUpperCase()} ${document.title}`;
-  const logo = document.querySelector<HTMLImageElement>('[data-tenant-logo]');
-  if (logo) {
-    logo.src =
-      tenant === 'uvu'
-        ? 'https://www.uvu.edu/_common/images/uvu-mono.svg'
-        : 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Utah_Utes_-_U_logo.svg/1024px-Utah_Utes_-_U_logo.svg.png';
-    logo.alt = tenant === 'uvu' ? 'Utah Valley University' : 'University of Utah';
-  }
   const brandLabel = document.querySelector<HTMLElement>('[data-tenant-name]');
   if (brandLabel) {
     brandLabel.textContent = tenant === 'uvu' ? 'UVU' : 'UofU';
